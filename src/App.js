@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Home from './Home/Home';
 
 function App() {
+  const [posts,setPosts] = useState([]);
+  useEffect(()=>{
+    fetch('https://api.facthunt.in/fostergem/v1/post/list/public')
+    .then(res=> res.json())
+    .then(data=>setPosts(data.content))
+  },[setPosts])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+          {
+            posts.map((post) => <Home key={post.postId} post={post}></Home> )
+          }
+      </div>
     </div>
   );
 }
