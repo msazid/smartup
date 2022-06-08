@@ -26,7 +26,7 @@ function App() {
         <div className="col-12 col-md-3">
           {close &&
             <div className="card shadow m-3">
-              <div className="d-flex justify-content-around my-3"><h4><BiBoltCircle></BiBoltCircle> SmartUp</h4>
+              <div className="d-flex  justify-content-between mx-4 my-3"><h4><BiBoltCircle></BiBoltCircle> SmartUp</h4>
                 <h4><button onClick={sideBar} style={{ border: 'none', background: 'transparent' }}><RiMenu3Fill></RiMenu3Fill></button></h4>
               </div>
               <div>
@@ -48,7 +48,7 @@ function App() {
                   <p style={{ fontSize: '28px' }}><AiOutlineAppstore /></p>
                   <p style={{ fontSize: '18px', marginLeft: '27px', marginBottom: '8px' }}>Discover</p>
                 </div>
-                <h4 style={{ fontSize: '18px', marginBottom: '0' }} className='bg-primary rounded-pill px-3 py-1 text-light'>25</h4>
+                <h4 style={{ fontSize: '15px', marginBottom: '8px' }} className='bg-primary rounded-pill px-3 py-1 text-light'>25</h4>
               </div>
               <div className='d-flex mx-4 align-items-center justify-content-between'>
                 <div className='d-flex  align-items-center'>
@@ -56,16 +56,31 @@ function App() {
                   <p style={{ fontSize: '18px', marginLeft: '27px', marginBottom: "8px" }}>SmartUp</p>
                 </div>
               </div>
-              {
-                posts.slice(0, 4).map(post =>
+            
                   <div className='d-flex   mx-4 align-items-center my-3'>
-                    <img width='30' className='rounded-pill' src={post.user.profilePic} alt="" />
+                    <img width='30' className='rounded-pill' src='https://i.ibb.co/0htCzrc/user10.jpg' alt="" />
                     <h6 style={{ marginBottom: '0' }} className='d-flex  w-100 justify-content-between align-items-center'>
-                      <span className='ms-4'>Community</span>
+                      <span className='ms-4'>Lead Community</span>
                     </h6 >
                   </div>
-                )
-              }
+                  <div className='d-flex   mx-4 align-items-center my-3'>
+                    <img width='30' className='rounded-pill' src='https://i.ibb.co/bvST5GS/user9.jpg' alt="" />
+                    <h6 style={{ marginBottom: '0' }} className='d-flex  w-100 justify-content-between align-items-center'>
+                      <span className='ms-4'>Team Community</span>
+                    </h6 >
+                  </div>
+                  <div className='d-flex   mx-4 align-items-center my-3'>
+                    <img width='30' className='rounded-pill' src='https://i.ibb.co/9r96CYm/user7.jpg' alt="" />
+                    <h6 style={{ marginBottom: '0' }} className='d-flex  w-100 justify-content-between align-items-center'>
+                      <span className='ms-4'>Fun Community</span>
+                    </h6 >
+                  </div>
+                  <div className='d-flex   mx-4 align-items-center my-3'>
+                    <img width='30' className='rounded-pill' src='https://i.ibb.co/M9P6SWx/user4.jpg' alt="" />
+                    <h6 style={{ marginBottom: '0' }} className='d-flex  w-100 justify-content-between align-items-center'>
+                      <span className='ms-4'>Tech Community</span>
+                    </h6 >
+                  </div>
               <div className='d-flex mx-4 align-items-center'>
                 <p style={{ fontSize: '22px' }}><IoPersonOutline /></p>
                 <p style={{ fontSize: '22px', fontWeight: '600', marginLeft: '6px', marginBottom: '10px' }}>Personal</p>
