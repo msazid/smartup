@@ -23,7 +23,7 @@ function App() {
   return (
     <div style={{ background: '#f9f9f9' }} className="App">
       <div className="row">
-        <div className="col-12 col-md-3">
+        <div className="col-12 col-md-3" style={{userSelect:'none', cursor:'pointer'}}>
           {close &&
             <div className="card shadow m-3">
               <div className="d-flex  justify-content-between mx-4 my-3"><h4><BiBoltCircle></BiBoltCircle> SmartUp</h4>
@@ -36,19 +36,19 @@ function App() {
                       <img width='40' className='rounded-pill' src={post.user.profilePic} alt="" />
                       <h4 style={{ marginBottom: '0', fontWeight: '600' }} className='d-flex  w-100 justify-content-between align-items-center'>
                         <span className='ms-4'>Profile</span>
-                        <span><span>12</span>
+                        <span><span className='me-3'>12</span>
                           <span style={{ fontSize: '35px', color: 'orangered' }}><IoNotificationsCircle /></span></span>
                       </h4 >
                     </div>
                   )
                 }
               </div>
-              <div className='d-flex mx-4 align-items-center justify-content-between'>
-                <div className='d-flex align-items-center'>
+              <div style={{backgroundColor:'#D8E8EE', borderLeft:'2px solid'}} className='d-flex align-items-center justify-content-between'>
+                <div className='d-flex ms-4 align-items-center'>
                   <p style={{ fontSize: '28px' }}><AiOutlineAppstore /></p>
                   <p style={{ fontSize: '18px', marginLeft: '27px', marginBottom: '8px' }}>Discover</p>
                 </div>
-                <h4 style={{ fontSize: '15px', marginBottom: '8px' }} className='bg-primary rounded-pill px-3 py-1 text-light'>25</h4>
+                <h4 style={{ fontSize: '15px', marginBottom: '2px' }} className='me-4 bg-primary rounded-pill px-3 py-1 text-light'>25</h4>
               </div>
               <div className='d-flex mx-4 align-items-center justify-content-between'>
                 <div className='d-flex  align-items-center'>
