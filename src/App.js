@@ -23,7 +23,7 @@ function App() {
   return (
     <div style={{ background: '#f9f9f9' }} className="App">
       <div className="row">
-        <div className="col-12 col-md-3" style={{userSelect:'none', cursor:'pointer'}}>
+        <div className="col-12 col-md-5 col-lg-3" style={{userSelect:'none', cursor:'pointer'}}>
           {close &&
             <div className="card shadow m-3">
               <div className="d-flex  justify-content-between mx-4 my-3"><h4><BiBoltCircle></BiBoltCircle> SmartUp</h4>
@@ -119,7 +119,7 @@ function App() {
         </div>
 
 
-        <div className={close ? ` col-12 col-md-9 ` : `col-12 col-md-12`}>
+        <div className={close ? ` col-12 col-md-7 col-lg-9 ` : `col-12 col-md-12`}>
           <nav class="navbar navbar-light bg-light">
             <div class="container">
             {
@@ -129,7 +129,7 @@ function App() {
               <span class="navbar-brand mb-0 h1" style={{background:'RoyalBlue',color:'white',padding:'5px 20px',borderRadius:'20px'}}><BsPlusLg/></span>
             </div>
           </nav>
-          <div className="mx-5 row row-cols-1 row-cols-md-3 g-4 m-3">
+          <div className="mx-5 row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 m-3">
             {
               posts.map((post) =>
                 <div class="col">
